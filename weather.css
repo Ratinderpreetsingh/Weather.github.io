@@ -1,0 +1,135 @@
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Shantell Sans', cursive;
+}
+/* #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  } */
+.weather-box{
+    padding: 35px;
+   
+   position: relative;
+    color: white;
+}
+.weather-box::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left:0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: url(images/pexels-simon-berger-3408552.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+.date{
+    background: rgb(15 15 16 / 23%);
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    padding: 1px;
+    border-radius: 8px;
+}
+.search{
+    border-radius: 91px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.temp-box{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sun-wind{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+   width: 100%;
+}
+.sun{
+    border-radius: 36px;
+    width: 100%;
+    background-color: rgb(0 0 0 / 46%);
+    margin-right: 10px;
+    text-align: center;
+}
+.wind{
+    border-radius: 36px;
+    width: 100%;
+    background-color: rgb(0 0 0 / 46%);
+    margin-left: 10px;
+    text-align: center;
+}
+
+.img-temp{
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0 0 0 / 46%);
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+.loc{
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+
+}
+.tem-des{
+    padding-top: 10px;
+    text-align: center;
+}
+.tem-des h1{
+    font-size: 87px;
+}
+sup {
+    top: -64px;
+}
+.search input{
+    width: 100%;
+    border-radius: 50px;
+    color: white;
+    margin: auto;
+    letter-spacing: 1px;
+    height: 47px;
+    padding: 20px;
+    font-size: 21px;
+    border: none;
+    outline: none;
+    background-color: rgb(0 0 0 / 46%);
+}
+/* .img{
+    background-image: url("images/icons8-haze-100.png");
+    background-position: center;
+    background-size: cover;
+} */
+@media screen and (max-width: 480px) {
+   
+    .search input{
+        width: 100%;
+        border-radius: 50px;
+        color: white;
+        margin: auto;
+        letter-spacing: 1px;
+        height: 47px;
+        padding: 20px;
+        font-size: 21px;
+        border: none;
+        outline: none;
+        background-color: rgb(0 0 0 / 46%);
+    }
+  }

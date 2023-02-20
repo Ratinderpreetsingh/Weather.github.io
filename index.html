@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather forecast</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fasthand&family=Martian+Mono:wght@300&family=Passions+Conflict&family=Poppins:wght@200&family=Prompt&family=Roboto:wght@300&family=Unbounded:wght@300&display=swap" rel="stylesheet">
+
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="images/icons8-happy-cloud-50.png">
+</head>
+<body>
+    <!-- <video autoplay muted loop id="myVideo">
+        <source src="videos/Pexels Videos 1856985.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video> -->
+    <div class="weather-box">
+        <div class="date" id="date">
+            monday 1,2023
+        </div>
+        <div class="search">
+          
+             <!-- <h1>Search for city</h1> -->
+             <form name="submit-to-google-sheet">
+        <input  type="text" name="search" id="search" placeholder="Enter your city" value="">
+              </form>
+        </div>
+
+        <div class="temp-box">
+            <div class="img-temp">
+                <div>
+                    <!-- <img src="images/images.png"> -->
+                    <!-- const IMGURL=`https://openweather.org/img/wn/${data.weather[0].icon}@2x.png` -->
+                    <img src="images/icons8-clouds-64.png" id="img" height="130px">
+                </div>
+    
+                <div class="tem-des">
+                    <h3 id="main">Clouds</h3>
+                    <h1 id="temp">31</h1>
+                </div>
+                <div class="loc">
+                    <h6 id="location"><span><i class="bi bi-geo-alt"></i></span> location</h6>
+                </div>
+            </div>
+
+            <div class="sun-wind">
+                <div class="sun">
+                    <h3>sun</h3>
+                    <h6 id="sunrise"><i class="bi bi-sunrise"></i> 6.00 AM</h6>
+                    <h6 id="sunset"><i class="bi bi-sunset"></i> 7.00 PM</h6>
+                </div>
+                <div class="wind">
+                    <h3>wind</h3>
+                    <h6 id="speed"> 17km/h</h6>
+                    <h6 id="humidity"><i class="fa fa-thermometer-4"></i>50%</h6>
+                </div>
+            </div>
+        </div>
+      
+
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxlwy6_oagC-QGkdxOgYlyc6_NNcq5CLrg8C2P9gyDwHMImT8X5qXCsyCnRzBbD1SklqA/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    <script src="weather.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+   
+
+    
+   
+  </body>
+</body>
+</html>
